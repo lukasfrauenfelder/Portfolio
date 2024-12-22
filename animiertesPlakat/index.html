@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <h1 class="Button"><i class="Weiss"></i></h1>
+
+    <p class="arrow2">
+      <a href="../index.html"><i class="arrow"></i></a>
+    </p>
+
+    <h1>Animiertes Plakat</h1>
+    <h4 class="hintergrund">Winter 2023 | Credits: Lukas Frauenfelder</h4>
+    <p>
+      Ziel dieses Moduls war es eine komplexe Informationsgrafik umzusetzen und
+      anschliessend zu animieren. Im Fokus stand das sinnvolle Strukturieren und
+      Layouten von Informationen in einem vorgegebenen Format (attraktiv,
+      plakativ und informativ), sowie der detaillierte Umgang mit allen
+      grafischen Grundlagen (Typografie, Farben, grafische Abgrenzung, grafische
+      Elemente). Entstanden ist ein Plakat, das meine Ausgaben in den Ferien mit
+      den Ausgaben im Alltag vergleicht.
+    </p>
+
+    <div class="Plakat">
+      <img
+        src="images/Plakat_raduziert.jpg"
+        alt="Textboxes"
+        title="Textboxes"
+        style="width: 100%; display: block; border: none"
+      />
+
+      <p class="Comon">
+        <a href="#" id="playVideo"><i class="Play"></i></a>
+      </p>
+    </div>
+
+    <!-- Video Popup -->
+    <div id="videoPopup">
+      <video id="fullscreenVideo" controls>
+        <source
+          src="/animiertesPlakat/images/22HS_DDA22_Share_1_Frauenfelder_Lukas_Clip_02.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <script>
+      const videoPopup = document.getElementById("videoPopup");
+      const video = document.getElementById("fullscreenVideo");
+      const playVideoLink = document.getElementById("playVideo");
+
+      // Show video popup and play video
+      playVideoLink.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent the default link behavior
+        videoPopup.style.display = "flex";
+        video.requestFullscreen(); // Enter fullscreen mode
+        video.play();
+      });
+
+      // Hide video popup when exiting fullscreen
+      video.addEventListener("fullscreenchange", () => {
+        if (!document.fullscreenElement) {
+          videoPopup.style.display = "none";
+          video.pause();
+        }
+      });
+    </script>
+
+    <div class="ContainerProzess">
+      <div class="ContentBox">
+        <h1 class="Prozess">Prozess</h1>
+        <p>
+          Ich wusste schon recht früh, dass ich die Metapher des Geld shreddern
+          nutzen wollte. Ich machte vielen Skizzen und so wurde die Idee immer
+          klarer. Durch mehrere Überarbeitungen und hilfreiche Gespräche konnte
+          ich meinen Entwurf stetig verbessern. Ich habe wohl noch nie so viele
+          Versionen eines Enwurfs gemacht wie in diesem Modul.
+        </p>
+
+        <img
+          src="images/Prozess/skizze_cash.png"
+          alt="ErsteUmsetzung"
+          class="center"
+        />
+        <img
+          src="images/Prozess/skizze_lang.png"
+          alt="ErsteUmsetzung"
+          class="center"
+        />
+
+        <section class="screenshots">
+          <article class="firstImage">
+            <img src="images/Prozess/grundkonzept.png" />
+          </article>
+          <article class="lastImage">
+            <img src="images/Prozess/tempImagez47ux0 1.png" />
+          </article>
+        </section>
+
+        <div class="centered-images">
+          <img src="images/Prozess/prozess.png" alt="Konzept" />
+          <img src="images/Prozess/prozess2.png" alt="Experimente" />
+          <img src="images/Prozess/prozess3.png" alt="Experimente" />
+        </div>
+
+        <h3 class="Trademark">Lukas Frauenfelder | Portfolio</h3>
+      </div>
+    </div>
+  </body>
+</html>
