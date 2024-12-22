@@ -1,0 +1,127 @@
+:root {
+  --menu-h: 40px;
+}
+
+@font-face {
+  font-family: "MyFont";
+  src: url("itc-lubalin-graph/LubalinGraphStd-Demi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  font-family: "MyFont";
+  background-color: rgb(255, 255, 255);
+}
+.menu {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: var(--menu-h);
+}
+
+.Textboxes {
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 30px;
+  color: rgb(13, 13, 13);
+}
+
+.left,
+.left2,
+.left3,
+.left4,
+.left5 {
+  width: 0px;
+  text-align: justify;
+  position: relative;
+}
+/* 
+.txt {
+  padding-top: 5px;
+  padding-inline: 3rem;
+} */
+
+.word,
+.verb,
+.noun {
+  /* color: rgb(0, 0, 0); */
+  color: rgb(0, 0, 0, 0.5);
+  border: solid 1px black;
+  padding: 5px;
+  /* background-color: #ccc; */
+}
+
+@keyframes stroke-animation {
+  0% {
+    -webkit-text-stroke: 1px #000; /* Black */
+  }
+  50% {
+    -webkit-text-stroke: 1px rgb(140, 177, 250); /* Blue */
+  }
+  100% {
+    -webkit-text-stroke: 1px #000; /* Black */
+  }
+}
+
+.animate-stroke {
+  animation: stroke-animation 1s ease-in-out;
+}
+
+.menu_leiste {
+  background-color: blue;
+  height: 60px;
+  position: fixed;
+  top: -110px; /* Hidden off-screen initially */
+  left: 0;
+  width: 100%;
+  transition: all 0.5s ease-in-out; /* Smooth animation */
+}
+
+.menu_leiste.open {
+  top: 0; /* Fully visible */
+}
+
+.arrow {
+  border: solid rgb(0, 0, 0);
+  border-width: 0 0.25rem 0.25rem 0;
+  display: inline-block;
+  padding: 0.5rem;
+  transform: rotate(135deg);
+  /* -webkit-transform: rotate(135deg); */
+  z-index: 2;
+  position: absolute;
+  right: 90px;
+  top: 22px;
+}
+
+.arrow2 {
+  border: solid rgb(0, 0, 0);
+  border-width: 0 0.25rem 0.25rem 0;
+  display: inline-block;
+  padding: 0.5rem;
+  transform: rotate(315deg);
+  /* -webkit-transform: rotate(135deg); */
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 22px;
+}
+
+.menu_button {
+  top: 12px;
+  left: 30px;
+  position: absolute;
+}
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
