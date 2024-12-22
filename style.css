@@ -1,0 +1,45 @@
+html {
+  font-size: 16pt;
+  font-size: clamp(14px, 2vw, 18pt);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(224, 224, 224);
+  transform-origin: top left;
+}
+
+h1 {
+  margin-top: 3vw;
+  padding-left: 10vw;
+  margin-bottom: 5px;
+  background-color: white; /* Sets the background color to white */
+  padding: 10px; /* Adds space inside the rectangle between the text and the edges */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: inline-block; /* Keeps the background tight to the text size */
+  margin-left: 9vw;
+}
+
+p {
+  padding-top: 0px;
+  padding-left: 10vw;
+  width: min(600px, 90vw);
+  max-width: none;
+  margin-bottom: 3vw;
+  font-size: 1rem;
+  margin-right: 20px;
+}
+
+li {
+  font-size: 1rem;
+  padding-left: 10vw;
+}
+
+@media (max-width: 650px) {
+  li {
+    font-size: 1.5rem;
+
+    padding-left: 10vw;
+  }
+}
