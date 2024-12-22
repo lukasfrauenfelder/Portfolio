@@ -1,3 +1,3 @@
-# Portfolio2
+# Portfolio
 
  https://lukasfrauenfelder.github.io/Portfolio/
