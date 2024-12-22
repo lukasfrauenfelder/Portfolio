@@ -1,0 +1,101 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+  background-color: rgb(251, 251, 251);
+}
+
+canvas {
+  display: block;
+}
+
+a {
+  color: rgb(0, 0, 0); /* Change text color */
+  text-decoration: none; /* Remove the underline */
+}
+
+.Button {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  font-size: 16px;
+  text-decoration: underline;
+  font-family: Helvetica, sans-serif;
+}
+
+.Textboxes {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.left {
+  width: 100%;
+  height: calc(100vh - var(--menu-h));
+  /* background-color: blue; */
+  overflow-y: scroll;
+}
+
+.right {
+  width: 100%;
+  height: calc(100vh - var(--menu-h));
+  /* background-color: blue; */
+  overflow-y: scroll;
+}
+
+.word {
+  color: transparent;
+  /* position: absolute; */
+  /* color: rgb(255, 112, 243, 10); */
+
+  /* text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ff70f3,
+    0 0 82px #ff70f3, 0 0 92px #ff70f3; */
+
+  /* text-shadow: 5px 0px 0px #ff70f3; */
+  /* text-shadow: 3px 0 #ff70f3, -1px -1px 0 #ff70f3, 1px -1px 0 #ff70f3,
+    -1px 1px 0 #ff70f3, 1px 1px 0 #ff70f3, 0 0 10px #ff70f3; */
+  padding-left: 10px;
+  padding-right: 10px;
+
+  overflow-x: auto;
+  /* border: solid 1px black; */
+  /* background-color: #ccc; */
+}
+
+.txt {
+  position: absolute; /* Remove .txt from the flow to avoid resizing the .Album div */
+  top: -70%; /* Center vertically relative to the image */
+  left: 50%; /* Center horizontally relative to the image */
+  transform: translate(-50%, -50%); /* Adjust to center the element exactly */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: visible; /* Allow the text to expand beyond the .txt boundaries */
+  line-height: 40px;
+}
+
+h1 {
+  margin-bottom: 100px;
+  text-align: center; /* Centers inline or inline-block text */
+  font-size: 20px;
+}
+
+.Album1,
+.Album2,
+.Album3,
+.Album4,
+.Album5,
+.Album6,
+.Album7,
+.Album8,
+.Album9,
+.Album10,
+.Album11 {
+  margin: 20px;
+  padding-inline: 100px;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
