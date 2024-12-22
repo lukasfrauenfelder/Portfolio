@@ -1,0 +1,479 @@
+html {
+  font-size: 16pt;
+  font-size: clamp(14px, 2vw, 18pt);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(224, 224, 224);
+  transform-origin: top left;
+  margin: 0%;
+}
+
+canvas {
+  display: block;
+}
+
+.two-columns {
+  column-count: 2; /* Number of columns */
+  column-gap: 40px; /* Space between the columns */
+  text-align: left; /* Optional: Makes text align evenly */
+  width: 72vw;
+  /* column-width: 30px; */
+  word-break: break-word; /* Prevents cutting words awkwardly */
+  hyphens: auto; /* Adds hyphenation if needed */
+}
+
+section.screenshots {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+
+  padding: 2rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  gap: 1rem; /* Add this line for spacing between images */
+  box-sizing: border-box; /* Ensures padding is included in the 100vw width */
+}
+
+section.screenshots article {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+section.screenshots article:first-child {
+  flex: 1.66;
+}
+section.screenshots article:last-child {
+  flex: 2;
+}
+section.screenshots article img {
+  width: 100%; /* Makes the images fill their container proportionally */
+  height: auto; /* Keeps the aspect ratio */
+  object-fit: cover; /* Ensures image covers the area */
+  display: block;
+}
+
+section.screenshots2 {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+
+  padding: 2rem;
+  padding-top: 1rem;
+  width: 100%;
+  gap: 1rem; /* Add this line for spacing between images */
+  box-sizing: border-box; /* Ensures padding is included in the 100vw width */
+}
+
+section.screenshots2 article {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+section.screenshots2 article:first-child {
+  flex: 1.66;
+}
+section.screenshots2 article:last-child {
+  flex: 2;
+}
+
+section.screenshots2 article img {
+  width: 100%; /* Makes the images fill their container proportionally */
+  height: auto; /* Keeps the aspect ratio */
+  object-fit: cover; /* Ensures image covers the area */
+}
+
+.fullscreen {
+  background-color: rgb(255, 255, 255);
+  padding: 2rem;
+  padding-top: 0;
+  padding-bottom: 0%;
+}
+
+.Button {
+  display: none; /* Standardmäßig unsichtbar */
+}
+
+p.arrow2 {
+  margin: 0%;
+  padding-top: 4vw;
+  z-index: 2;
+  padding-left: 3vw;
+
+  position: absolute;
+}
+
+.arrow {
+  border: solid rgb(0, 0, 0);
+  border-width: 0 0.25rem 0.25rem 0;
+  display: inline-block;
+  padding: 0.5rem;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  z-index: 2;
+}
+
+.container {
+  padding-top: 10px;
+  background-color: rgb(12, 45, 87);
+  display: flex; /* Enable flexbox layout */
+  width: 100%; /* Make the container full width */
+  justify-content: space-between; /* Ensure the elements are spaced next to each other */
+  gap: 0px;
+  /* padding-bottom: 100px; */
+}
+
+.row {
+  display: flex;
+}
+
+.allCollumns {
+  padding: 0 4px;
+  flex: 65%;
+  /* margin: 0px; */
+}
+
+img {
+  display: block;
+  padding: 0%;
+  margin: 0%;
+}
+
+.images-wrapper img {
+  width: 45%; /* Set each image to fill the viewport width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+#Front {
+  width: 53%; /* Set each image to fill the viewport width */
+  height: auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.centered-images {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 2px; /* Abstand zwischen den Bildern */
+  width: 49.5%;
+}
+
+.centeredText {
+  width: 40vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hintergrund {
+  color: rgb(136, 136, 136);
+  margin: 0px;
+}
+
+h1 {
+  margin-top: 3vw;
+  line-height: normal;
+  padding-left: 10vw;
+  margin-bottom: 5px;
+  background-color: white; /* Sets the background color to white */
+  padding: 10px; /* Adds space inside the rectangle between the text and the edges */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: inline-block; /* Keeps the background tight to the text size */
+  margin-left: 9vw;
+}
+
+p {
+  padding-top: 0px;
+  padding-left: 10vw;
+  width: min(600px, 90vw);
+  max-width: none;
+  margin-bottom: 3vw;
+  font-size: 1rem;
+  margin-right: 20px;
+}
+
+h4 {
+  padding-left: 10vw;
+  font-size: 14px;
+  padding-top: 2px;
+  font-weight: lighter;
+  /* padding-left: 3vw; */
+}
+
+#sketch1 {
+  /* display: block; */
+  width: 100%;
+  overflow: hidden;
+  /* padding-left: 100px; */
+}
+
+.containerSketch1 {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(12, 45, 87);
+  width: auto;
+}
+
+.ContainerProzess {
+  box-sizing: border-box;
+  display: block;
+  height: auto;
+  line-height: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+  padding-left: 37.76px;
+  padding-right: 37.76px;
+  text-rendering: optimizespeed;
+  unicode-bidi: isolate;
+  width: auto;
+  -webkit-font-smoothing: antialiased;
+  height: auto;
+}
+
+.ContentBox {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+
+  line-height: 24px;
+
+  overflow-wrap: break-word;
+  padding-bottom: 60px;
+  padding-left: 50.4px;
+  padding-right: 50.4px;
+  padding-top: 150px;
+  text-rendering: optimizespeed;
+  unicode-bidi: isolate;
+  display: flex;
+  flex-direction: column; /* Aligns children vertically */
+  gap: 0; /* Ensures no space between elements */
+  height: auto;
+}
+
+.ContentBox h1 {
+  margin-left: 0px;
+  font-size: 1.5rem;
+  font-weight: 100;
+  box-sizing: border-box; /* Ensures consistent box model */
+  overflow: visible; /* Prevents clipping */
+  line-height: normal;
+  position: relative; /* Allows positioning relative to its normal location */
+  left: -10px; /* Moves the h1 10px to the left */
+  width: fit-content;
+}
+
+.Trademark {
+  text-align: center;
+  color: rgb(187, 187, 187);
+  align-items: center;
+  font-size: 0.7rem;
+  width: 100%;
+  font-weight: 100;
+
+  margin-top: 140px;
+  bottom: 35px;
+}
+
+.ContentBox p {
+  margin: 0%;
+  padding-left: 0px;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  width: 50%;
+}
+
+.ContentBox img {
+  margin: 0%;
+  padding: 4px;
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  .Trademark {
+    margin-top: 140px;
+    /* padding-bottom: 50px; */
+    margin-bottom: unset;
+  }
+  .image-row {
+    line-height: 0;
+    grid-template-columns: repeat(5, 1fr); /* Creates 5 equal-width columns */
+    -moz-column-count: 5;
+    -moz-column-gap: 0px;
+    column-count: 2;
+    column-gap: 8px;
+
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+
+    padding-left: 20px; /* Add 20px padding on the left */
+    padding-right: 20px; /* Add 20px padding on the right */
+    box-sizing: border-box; /* Ensure padding doesn't exceed 100% width */
+    max-width: 100%; /* Prevent it from exceeding the viewport width */
+  }
+  .image-row img {
+    display: block;
+    box-sizing: border-box;
+    padding-inline: initial;
+  }
+
+  .ContentBox img:not(.image-row img) {
+    margin: 0%;
+    padding: 4px;
+    padding-inline: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  section.screenshots,
+  section.screenshots2 {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    padding: 0px;
+    width: 100%;
+    gap: initial;
+    box-sizing: border-box;
+  }
+
+  .fullscreen {
+    background-color: rgb(255, 255, 255);
+    padding: 0rem;
+    padding-top: 0;
+    padding-bottom: 0%;
+  }
+
+  .two-columns {
+    column-count: 1; /* Number of columns */
+    text-align: left; /* Optional: Makes text align evenly */
+    width: auto;
+    word-break: break-word;
+    hyphens: auto;
+    margin: 20px;
+  }
+
+  .Button {
+    display: block; /* Bei max-width: 650px sichtbar */
+    z-index: 2;
+    position: absolute;
+    width: 22px;
+    height: 25px;
+    margin-top: 8px;
+  }
+
+  p.arrow2 {
+    margin: 0%;
+    padding-top: 15px;
+    z-index: 2;
+    padding-left: 26px;
+
+    position: relative;
+  }
+
+  p {
+    padding-top: 0px;
+    padding-left: 0px;
+    /* width: min(600px, 90vw); */
+    max-width: none;
+    margin-bottom: 3vw;
+    font-size: 1.2rem;
+    margin-right: 20px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    line-height: 1.3;
+  }
+  h4 {
+    padding-left: 20px;
+    /* margin-left: 20px; */
+    font-size: 14px;
+    padding-top: 2px;
+    font-weight: lighter;
+    /* padding-left: 3vw; */
+  }
+  h1 {
+    margin-top: 3vw;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    background-color: white; /* Sets the background color to white */
+    padding: 10px; /* Adds space inside the rectangle between the text and the edges */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block; /* Keeps the background tight to the text size */
+    margin-left: 10px;
+  }
+
+  .ContainerProzess {
+    box-sizing: border-box;
+    display: block;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    padding: 0%;
+    text-rendering: optimizespeed;
+    unicode-bidi: isolate;
+    width: auto;
+    -webkit-font-smoothing: antialiased;
+    height: auto;
+  }
+
+  .ContentBox {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    line-height: 24px;
+    overflow-wrap: break-word;
+    padding-bottom: 35px;
+    padding-top: 50px;
+    text-rendering: optimizespeed;
+    unicode-bidi: isolate;
+    padding-inline: 0;
+    height: auto;
+  }
+
+  p,
+  .ContentBox p {
+    padding: 0%;
+    width: auto;
+    max-width: none;
+    margin-bottom: 3vw;
+    font-size: 1.2rem;
+    margin-right: 20px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    line-height: 1.3;
+  }
+
+  .ContentBox h1 {
+    margin-left: 20px;
+  }
+}
+
+.image-row {
+  line-height: 0;
+  grid-template-columns: repeat(5, 1fr); /* Creates 5 equal-width columns */
+  -moz-column-count: 5;
+  -moz-column-gap: 0px;
+  column-count: 2;
+  column-gap: 8px;
+
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.image-row img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover; /* Ensures images fit within their grid cell */
+}
+
+.adjustment {
+  height: 200px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the image fits nicely within the defined height */
+}
