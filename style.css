@@ -36,10 +36,138 @@ li {
   padding-left: 10vw;
 }
 
-@media (max-width: 650px) {
-  li {
-    font-size: 1.5rem;
+.ContainerProzess {
+  box-sizing: border-box;
+  display: block;
+  height: auto;
+  line-height: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px;
+  padding-inline: 20px;
+  text-rendering: optimizespeed;
+  unicode-bidi: isolate;
+  width: auto;
+  -webkit-font-smoothing: antialiased;
+}
 
-    padding-left: 10vw;
+.ContentBox {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  padding-bottom: 67.2px;
+  padding-left: 50.4px;
+  padding-right: 50.4px;
+  padding-top: 20px;
+  text-rendering: optimizespeed;
+  unicode-bidi: isolate;
+  position: relative;
+  height: auto;
+}
+
+.image-row {
+  line-height: 0;
+  grid-template-columns: repeat(5, 1fr); /* Creates 5 equal-width columns */
+  -moz-column-count: 5;
+  -moz-column-gap: 0px;
+  column-count: 2;
+  column-gap: 45px;
+
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.image-row img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover; /* Ensures images fit within their grid cell */
+  /* padding-top: 45px; */
+  margin-top: 45px;
+}
+
+.image-row img:hover {
+  box-shadow: -16px -16px rgba(235, 112, 234, 1);
+  transition: all 0.5s ease-in-out;
+  /* transform: scale(1.05); */
+}
+
+.TraumaTank {
+  color: black;
+  font-style: normal;
+}
+
+.Trademark {
+  text-align: center;
+  color: rgb(187, 187, 187);
+  align-items: center;
+  font-size: 0.7rem;
+  width: 100%;
+  font-weight: 100;
+
+  margin-top: 140px;
+  bottom: 35px;
+}
+
+@media (max-width: 650px) {
+  .image-row img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover; /* Ensures images fit within their grid cell */
+    /* padding-top: 45px; */
+    margin-top: 22px;
   }
+
+  .image:active {
+    box-shadow: -16px -16px rgba(235, 112, 234, 1);
+    transition: all 0.5s ease-in-out;
+  }
+  .image-row {
+    line-height: 0;
+    grid-template-columns: repeat(5, 1fr); /* Creates 5 equal-width columns */
+    -moz-column-count: 5;
+    -moz-column-gap: 0px;
+    column-count: 1;
+    column-gap: 45px;
+
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .ContentBox {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    line-height: 24px;
+    overflow-wrap: break-word;
+    padding-bottom: 67.2px;
+    padding-inline: 0px;
+    padding-top: 20px;
+    text-rendering: optimizespeed;
+    unicode-bidi: isolate;
+    position: relative;
+    height: auto;
+  }
+  body {
+    /* margin: 0px; */
+  }
+}
+
+/* Hover title style */
+.title {
+  background-color: white; /* Sets the background color to white */
+  padding: 16px; /* Adds space inside the rectangle between the text and the edges */
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: black;
+  padding-top: auto;
+  padding-bottom: auto;
+  display: inline-block;
+  pointer-events: none; /* Disable mouse interactions */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  opacity: 0;
 }
