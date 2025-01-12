@@ -171,7 +171,7 @@ function draw() {
 
 function navigateToNewPage() {
   console.log("gugus?");
-  const baseURL = "/Textanalyse/Website/text_shadow_final/index.html"; // Update with your new page's path
+  const baseURL = "text_shadow_final/index.html"; // Update with your new page's path
   const query = selectedAlbums.map(encodeURIComponent).join(","); // Encode album titles
   window.location.href = `${baseURL}?albums=${query}`;
 }
