@@ -23,7 +23,7 @@ function preload() {
 
 function navigateToNewPage() {
   console.log("gugus?");
-  const baseURL = "/Textanalyse/Website/interactive_blur/index.html"; // Update with your new page's path
+  const baseURL = "interactive_blur/index.html"; // Update with your new page's path
   const query = currentAlben.map(encodeURIComponent).join(","); // Encode album titles
   window.location.href = `${baseURL}?albums=${query}`;
 }
