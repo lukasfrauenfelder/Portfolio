@@ -1,3 +1,5 @@
+const original = document.querySelector(".containerSketch1 div");
+
 let canvases = [];
 let idArray = [1, 2, 3];
 
@@ -206,8 +208,10 @@ function setup() {
   slider = createSlider(0, 800, 0);
   slider.position(0, 0);
   slider.class("myCustomSlider");
-    slider.style("position", "relative");
+  slider.style("position", "relative");
   slider.style("z-index", "10");
+
+  slider.parent(original);
 
 
   slider.size(140);
