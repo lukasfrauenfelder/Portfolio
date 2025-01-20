@@ -204,8 +204,11 @@ function setup() {
   }
 
   slider = createSlider(0, 800, 0);
-  slider.position(10, 2250);
+  slider.position(0, 0);
   slider.class("myCustomSlider");
+    slider.style("position", "relative");
+  slider.style("z-index", "10");
+
 
   slider.size(140);
   // slider.input(slidervalue);
