@@ -208,7 +208,7 @@ h1 {
 p {
   padding-top: 0px;
   padding-left: 10vw;
-  width: min(600px, 90vw);
+  width: 35vw;
   max-width: none;
   margin-bottom: 3vw;
   font-size: 1rem;
@@ -288,12 +288,9 @@ h4 {
 .ContentBox p {
   margin: 0%;
   padding-left: 0px;
-  padding-bottom: 50px;
+  padding-bottom: 3vw;
   padding-top: 10px;
-  width: 50%;
-
-  /* padding-right: 200px; */
-  /* box-sizing: border-box; */
+  width: 36vw;
 }
 
 .ContentBox img {
