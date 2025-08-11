@@ -67,6 +67,7 @@ li {
   unicode-bidi: isolate;
   position: relative;
   height: auto !important;
+  overflow: hidden; /* trims any extra Safari padding */
 }
 
 .image-row {
@@ -80,6 +81,8 @@ li {
   display: inline-block;
   margin-right: auto;
   margin-left: auto;
+  overflow: visible;
+  vertical-align: top; /* helps remove extra space in Safari */
 }
 
 .image-row img {
@@ -88,7 +91,10 @@ li {
   object-fit: cover; /* Ensures images fit within their grid cell */
   /* padding-top: 45px; */
   margin-top: 45px;
+  overflow: visible;
 }
+
+
 
 .image-row img:hover {
   box-shadow: -16px -16px rgba(235, 112, 234, 1);
@@ -171,6 +177,7 @@ li {
   display: inline-block; /* keeps images inline but allows positioning */
 }
 
+
 .solid_Title {
   position: absolute;
   top: 54px;
@@ -188,7 +195,8 @@ li {
   pointer-events: none;
 }
 
-/* Show the title when hovering the image (or the link) */
+/* Show the title when hovering the image (or the link)*/
 .image-row a:hover .solid_Title {
   opacity: 1;
 }
+
