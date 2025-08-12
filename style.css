@@ -97,8 +97,8 @@ li {
 
 
 .image-row img:hover {
-  box-shadow: -16px -16px rgba(235, 112, 234, 1);
-  transition: all 0.5s ease-in-out;
+  /*box-shadow: -16px -16px rgba(235, 112, 234, 1); */
+ /* transition: all 0.5s ease-in-out; */
   /* transform: scale(1.05); */
 }
 
