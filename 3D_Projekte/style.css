@@ -157,6 +157,7 @@ section.screenshots2 article:last-child {
   width: 100%; /* Make the container span the full viewport width */
   margin: 0; /* Remove default margins */
   padding: 0; /* Remove default padding */
+  align-items: stretch; /* children take same height */
 }
 
 .images-wrapper .left_pic,
@@ -175,12 +176,13 @@ section.screenshots2 article:last-child {
 }
 
 .images-wrapper .right_pic video {
-  /* height: 79%; */
-  /* display: block; */
-  height: -webkit-fill-available;
+  height: 100%; /* keep aspect ratio */
+  display: block; /* remove inline spacing */
+  object-fit: cover; /* crop if aspect ratio differs */
 }
 .images-wrapper .left_pic img {
   height: 100%;
+  display: block;
 }
 
 .images-wrapper_quater .left_pic {
