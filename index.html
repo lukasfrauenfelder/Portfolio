@@ -116,7 +116,11 @@
       const endScroll = images.offsetTop - innerBox.offsetHeight; // wann es aufhören soll
       const projectsText = document.querySelector(".BigProjects");
 
-      let value = 505 + scrollTop * 2;
+      if (scrollTop < 0) {
+        scrollTop = 0;
+      }
+
+      let value = 507 + scrollTop * 2;
       if (scrollTop <= startScroll) {
         innerBox.style.width = `${value}px`;
       }
