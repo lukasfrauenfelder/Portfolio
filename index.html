@@ -4,9 +4,28 @@
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Portfolio | Lukas Frauenfelder</title>
   </head>
   <body>
+    <div class="ContainerProzess">
+      <div class="UpperBox">
+        <div class="innerBox">
+          <div class="small-wrapper">
+            <p class="Big">Lukas Frauenfelder</p>
+          </div>
+          <div class="small-wrapper">
+            <p class="small">
+              Ich bin Grafikdesigner mit Flair für Daten – ich verwandle
+              komplexe Informationen in klare, ästhetische Visualisierungen.
+            </p>
+          </div>
+          <div class="small-wrapper">
+            <p class="BigProjects">Projects</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="ContainerProzess">
       <div class="ContentBox">
         <div class="image-row">
@@ -68,7 +87,7 @@
               data-title="Elektroschrott"
             />
           </a>
-            <a href="3D_Projekte/index.html">
+          <a href="3D_Projekte/index.html">
             <p class="solid_Title">3D-Projekte</p>
             <img
               src="Images/Reissverschluss.png"
@@ -77,10 +96,58 @@
               data-title="Elektroschrott"
             />
           </a>
-
         </div>
         <h3 class="Trademark">Lukas Frauenfelder | Portfolio</h3>
       </div>
     </div>
   </body>
+
+  <script>
+    const innerBox = document.querySelector(".innerBox");
+    const images = document.querySelector(".ContainerProzess");
+
+    if (window.scrollY > 770) {
+      innerBox.style.width = `100vw`;
+    }
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const startScroll = innerBox.offsetTop; // wann das Wachstum beginnt
+      const endScroll = images.offsetTop - innerBox.offsetHeight; // wann es aufhören soll
+      const projectsText = document.querySelector(".BigProjects");
+
+      let value = 505 + scrollTop * 2;
+      if (scrollTop <= startScroll) {
+        innerBox.style.width = `${value}px`;
+      }
+
+      if (scrollTop >= 435) {
+        innerBox.style.width = `100vw`;
+      }
+
+      projectsText.addEventListener("click", () => {
+        window.scrollTo({
+          top: 770,
+          behavior: "smooth", // sorgt für sanftes Scrollen
+        });
+      });
+    });
+
+    // === Scrollposition beim Verlassen der Seite speichern ===
+    window.addEventListener("beforeunload", () => {
+      sessionStorage.setItem("scrollPosition", window.scrollY);
+    });
+
+    // === Scrollposition beim Laden der Seite wiederherstellen ===
+    window.addEventListener("load", () => {
+      const savedPosition = sessionStorage.getItem("scrollPosition");
+      if (savedPosition !== null) {
+        window.scrollTo({ top: parseInt(savedPosition), behavior: "instant" });
+      }
+
+      if (savedPosition >= 435) {
+        innerBox.style.width = `100vw`;
+      }
+    });
+  </script>
 </html>
