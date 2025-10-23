@@ -105,16 +105,24 @@
   <script>
     const innerBox = document.querySelector(".innerBox");
     const images = document.querySelector(".ContainerProzess");
+    const projectsText = document.querySelector(".BigProjects");
 
     if (window.scrollY > 770) {
       innerBox.style.width = `100vw`;
     }
 
+    projectsText.addEventListener("click", () => {
+        window.scrollTo({
+          top: 770,
+          behavior: "smooth", // sorgt für sanftes Scrollen
+        });
+      });
+
     window.addEventListener("scroll", () => {
       const scrollTop = window.scrollY;
       const startScroll = innerBox.offsetTop; // wann das Wachstum beginnt
       const endScroll = images.offsetTop - innerBox.offsetHeight; // wann es aufhören soll
-      const projectsText = document.querySelector(".BigProjects");
+      
 
       if (scrollTop < 0) {
         scrollTop = 0;
@@ -129,12 +137,7 @@
         innerBox.style.width = `100vw`;
       }
 
-      projectsText.addEventListener("click", () => {
-        window.scrollTo({
-          top: 770,
-          behavior: "smooth", // sorgt für sanftes Scrollen
-        });
-      });
+      
     });
 
     // === Scrollposition beim Verlassen der Seite speichern ===
